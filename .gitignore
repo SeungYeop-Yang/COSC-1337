@@ -39,3 +39,29 @@
 
 # debug information files
 *.dwo
+
+# CMake generated files
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+# IDE-specific files
+.idea/         # CLion
+*.suo          # Visual Studio
+*.user         # Visual Studio
+*.pcb          # Visual Studio
+*.VC.db        # Visual Studio
+*.VC.opendb    # Visual Studio
+*.vcxproj.user # Visual Studio
+# Other common build directories
+out/
