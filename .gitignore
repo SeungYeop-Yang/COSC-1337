@@ -65,3 +65,6 @@ CMakeUserPresets.json
 *.vcxproj.user # Visual Studio
 # Other common build directories
 out/
+
+# .vscode
+.vscode
