@@ -1,8 +1,8 @@
 {
-    "version": 4,
+    "version": 3,
     "configurePresets": [
         {
-            "name": "default",
+            "name": "myproject",
             "description": "Default settings for my cmake project",
             "hidden": false,
             "generator": "Unix Makefiles",
