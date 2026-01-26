@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.2)
+cmake_minimum_required(VERSION 3.28)
 project(myproject)
 add_executable(${PROJECT_NAME} main.cpp)
 #add_library(mylib STATIC lib.cpp)
