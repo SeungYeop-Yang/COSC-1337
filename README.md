@@ -4,6 +4,10 @@ ACC COSC-1337
 
 # History
 
+20260125
+
+- watched [YouTube video](https://youtu.be/qeEcV6u1kV4?si=w6vMFI_mALre8WaZ) on how to build C++ code with vscode
+
 20260122 ch01
 
 - ch01/01-first
