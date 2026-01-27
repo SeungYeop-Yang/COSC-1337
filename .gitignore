@@ -68,3 +68,5 @@ out/
 
 # .vscode
 .vscode
+homework
+.DS_Store
