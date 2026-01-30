@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    cout << "Don't cheat yourself, treat yourself";
+int main() {
+  cout << "Don't cheat yourself, treat yourself";
 
-    return 0;
+  return 0;
 }
