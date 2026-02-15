@@ -24,6 +24,7 @@ public:
     ErrCode RmvElem(int);
     void Copy(Set *);
     Bool Equal(Set *);
+    Bool EqualRef(Set &);
     void Print();
     void Intersect(Set *, Set *);
     ErrCode Union(Set *, Set *);
@@ -61,6 +62,7 @@ ErrCode Set::RmvElem(int elem)
                 elems[i] = elems[i + 1];
             --card;
         }
+    return noErr;
 }
 
 void Set::Copy(Set *set)
@@ -76,6 +78,16 @@ Bool Set::Equal(Set *set)
         return False;
     for (int i = 0; i < card; ++i)
         if (!set->Member(elems[i]))
+            return False;
+    return True;
+}
+
+Bool Set::EqualRef(Set &set)
+{
+    if (card != set.card)
+        return False;
+    for (int i = 0; i < card; ++i)
+        if (!set.Member(elems[i]))
             return False;
     return True;
 }
@@ -109,6 +121,10 @@ int main()
     s1.Print();
     std::cout << "s2 = ";
     s2.Print();
+    s1.Equal(&s2) ? std::cout << "s1 and s2 are equal" << std::endl
+                 : std::cout << "s1 and s2 are not equal" << std::endl;
+    s1.EqualRef(s2) ? std::cout << "s1 and s2 are equal" << std::endl
+                 : std::cout << "s1 and s2 are not equal" << std::endl;
 
     return 0;
 }
