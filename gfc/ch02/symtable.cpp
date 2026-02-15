@@ -15,6 +15,7 @@ class SymTable {
 
 public:
     SymTable (int);
+    ~SymTable();
     Symbol* AddSym (char*, SymValue);
     Symbol* FindSym (char*);
     bool    RmvSym (char*);
@@ -34,6 +35,19 @@ SymTable::SymTable (int sz)
             table[i] = nullptr;
     else
         size = 0;
+}
+
+SymTable::~SymTable()
+{
+    for (int i = 0; i < size; ++i)
+        for (Symbol* sym = table[i], *tmp; sym != nullptr; )
+        {
+            sym = (tmp = sym)->next;
+            delete tmp->name;
+            delete tmp;
+        }
+    if (size > 0)
+        delete table;
 }
 
 int SymTable::Hash (char* name)  // the hash function
