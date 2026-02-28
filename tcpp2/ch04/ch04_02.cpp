@@ -50,6 +50,13 @@ public:
         for (int i = 0; i < s; i++)
             elem[i] = 0;
     }
+
+    ~Vector() { delete[] elem; }
+    // Plain `delete` deletes an individual object,
+    // `delete[]` deletes an array.
+
+    double& operator[](int i) { return elem[i]; }
+    int size() const { return sz; }
 };
 
 int main()
@@ -58,5 +65,11 @@ int main()
     Complex b = Complex(2, 3);
 
     cout << static_cast<string>(a == b ? "True" : "False") << endl;
+    if (a == b) {
+        cout << "True" << endl;
+    }
+    else {
+        cout << "False" << endl;
+    }
     return 0;
 }
