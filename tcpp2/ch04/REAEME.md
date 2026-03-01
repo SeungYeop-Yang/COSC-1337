@@ -13,3 +13,7 @@
 # 4.2 Concrete Types
 
 they behave "just like built-in types."
+
+# 4.3 Abstract Types
+
+a type that completely insulates a user from implementation details.

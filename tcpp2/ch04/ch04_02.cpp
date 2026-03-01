@@ -1,5 +1,7 @@
+#include <initializer_list>
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 /********1*********2*********3*********4*********5*********6*********7********/
@@ -51,6 +53,11 @@ public:
             elem[i] = 0;
     }
 
+    Vector() { Vector(0); }
+
+    // Vector(initializer_list<double>);
+    // void push_back(double);
+
     ~Vector() { delete[] elem; }
     // Plain `delete` deletes an individual object,
     // `delete[]` deletes an array.
@@ -58,6 +65,14 @@ public:
     double& operator[](int i) { return elem[i]; }
     int size() const { return sz; }
 };
+
+// Vector read(istream& is)
+// {
+//     Vector v;
+//     for (double d; is >> d;)
+//         v.push_back(d);
+//     return v;
+// }
 
 int main()
 {
@@ -71,5 +86,8 @@ int main()
     else {
         cout << "False" << endl;
     }
+
+    // Vector v = read(cin);
+
     return 0;
 }
