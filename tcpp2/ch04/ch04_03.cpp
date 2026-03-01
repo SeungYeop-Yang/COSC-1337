@@ -108,13 +108,14 @@ int main()
 {
     Vector_container vc(10);
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < vc.size(); i++)
         vc[i] = i;
-
     use(vc);
+    cout << endl;
 
     List_container lc = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     use(lc);
+    cout << endl;
 
     return 0;
 }
