@@ -35,8 +35,10 @@ int main()
             numbers[i] = oldArray[i];
         }
 
-        delete oldArray;
+        delete[] oldArray;
         oldArray = nullptr;
+        //*oldArray = 111.11;
+        // oldArray[4] = 444.44;
 
         // add a new value
         numbers[count] = 55.55;
