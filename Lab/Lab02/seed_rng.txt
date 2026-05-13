@@ -1,0 +1,12 @@
+Professor,
+Another question from the statement below regarding Lab2:
+"You should seed the random number generator with the system time. See it in the function or module that need it.  In this case it would be in the 'deal' method."
+
+Referring to c++ reference guide on srand(): https://en.cppreference.com/w/cpp/numeric/random/srand.html
+"Notes:
+Generally speaking, the pseudo-random number generator should only be seeded once, before any calls to rand(), at the start of the program. It should not be repeatedly seeded, or reseeded every time you wish to generate a new batch of pseudo-random numbers. Standard practice is to use the result of a call to std::time(0) as the seed."
+
+My question is:
+If we seed the random number generator in the method 'deal', then we keep seeding the random number generator whenever we call the method 'deal', and that's contradicting with the c++ reference guide. Another side effect is that we seed with the standard practice by seeding with the system time that is 'second' scale  precision, when multiple 'deal' methods were called back to back (that can be microsecond scale) while we are playing three cards game that can cause the same seed to be applied to the objects and consequently comes up with the same number across (array of) the objects instead of random numbers intended.
+
+Why do we have to seed the random number generator repeatedly via the method 'deal'? Is there any special reason for that?
